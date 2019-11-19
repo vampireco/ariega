@@ -9,215 +9,240 @@
   </head>
   <style>
     
-    body {
- width: 100%;
- height: 100vh;
- overflow: hidden;
- background-color: #f8f3;
- font-family: verdana;
-}
-.bg {
- color: #571;
- display: flex;
- align-items: center;
- justify-content: center;
- flex-direction: column;
- margin: 0;
- padding: 0;
- background-color: #f8f3;
- height: 100%;
-}
-
-.porcupine {
- position:absolute;
-  cursor: pointer;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  flex-direction: row;
-  width: 200px;
-  height:200px;
-  background-color: #795548;
-  border-radius: 50%;
-  overflow: hidden;
-  transition: all 1s;
-}
-.head {
+.mainDiv
+{
  position: relative;
- width: 200px;
- height: 70px;
- border-width: 0px 10px 10px 0px;
- background-color: #FFCCBC;
- object-fit: cover;
- margin: 0 auto;
- transition: all 200ms;
+    background: no-repeat center center;
+    background-size: cover;
+    min-height: 150vh; 
 }
-.spike:hover .head {
- transition:all 100ms;
- position: relative;
- width: 200px;
- height: 30px;
- border-width: 0px 10px 10px 0px;
- background-color: #FFCCBC;
- object-fit: cover;
- margin: 0 auto;
+.bgColor
+{
+  background: linear-gradient(70deg, rgba(0, 0, 255, 0.7), rgba(181, 95, 174, 0.9));
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
-.spike:hover .leftEye:after,
-.spike:hover .rightEye:after{
- transition: 200ms all;
- content:'';
- transform: rotatex(85deg);
-}
-.leftEye {
- position:absolute;
- top: -50px;
- left: 18%;
- width: 60px;
- height: 70px;
- border-radius: 50%;
- background-color: #FFCCBC;
-}
-.leftEye:before {
- display: block;
- position: absolute;
- bottom: 0;
- content:'';
- width: 60px;
- height: 30px;
- background-color: #FFCCBC;
-}
-.leftEye:after {
- display: block;
- position: absolute;
- top: 20px;
- left: 20px;
- content:'';
- border-radius: 50%;
- width: 20px;
- height: 20px;
- background-color: #000;
-}
-.rightEye {
-position:absolute;
- top: -50px;
- right: 18%;
- width: 60px;
- height: 70px;
- border-radius: 50%;
- background-color: #FFCCBC;
-}
-.rightEye:before {
- display: block;
- position: absolute;
- bottom: 0;
- content:'';
- width: 60px;
- height: 30px;
- background-color: #FFCCBC;
-}
-.rightEye:after {
- display: block;
- position: absolute;
- top: 20px;
- right: 20px;
- content:'';
- border-radius: 50%;
- width: 20px;
- height: 20px;
- background-color: #000;
-}
-.spike {
-  cursor: pointer;
-  width: 200px;
-  height:200px;
-  background-color: #795548;
-  border-radius: 50%;
-}
-.spike:before {
- content: '';
- background-color: #795548;
- position:absolute;
- transform-origin: center;
- transform: scale(0.6); 
- width: 200px;
- height: 250px;
- clip-path: polygon(0% 50%, 100% 50%, 92% 40%, 98% 34%, 90% 30%, 98% 19%, 86% 20%, 95% 12%, 81% 14%, 83% 5%, 72% 8%, 68% 3%, 62% 6%, 57% 1%, 52% 5%, 46% 0%, 42% 6%, 35% 1%, 30% 8%, 20% 5%, 22% 13%, 10% 10%, 15% 20%, 3% 21%, 11% 30%, 3% 35%, 10% 40%);
- transition: all 500ms;
-}
-.spike:hover:before {
- transform: scale(1.3); 
- content: '';
-  transition: all 50ms;
-}
-.spike.porcupine {
- height:100px;
-}
-.nose {
-position:absolute;
- top: -5px;
- left: 45%;
- width: 20px;
- height: 20px;
- border-radius: 50%;
- background-color: #000;
-}
-.nose:after {
- width: 10px;
- height: 10px;
- border-radius: 50%;
- background-color: #fff;
-}
-.leftEar {
-position:absolute;
- top: -70px;
- left: 20%;
- width: 20px;
- height: 20px;
- border-radius: 50%;
- background-color: #FFCCBC;
- clip-path: inset(0 0 50% 0);
- transform: rotate(-45deg);
- animation: lEarMove 4s ease-out infinite;
-}
-.rightEar {
- position:absolute;
- top: -70px;
- right: 20%;
- width: 20px;
- height: 20px;
- border-radius: 50%;
- background-color: #FFCCBC;
- clip-path: inset(0 0 50% 0);
- transform: rotate(45deg);
- animation: rEarMove 4s ease-out infinite;
+.flex-wrap {
+    flex-wrap: wrap!important;
 }
 
-.text{text-align:center}
-@keyframes rEarMove {
- 50% {transform: rotate(60deg)}
+.d-flex {
+    display: flex!important;
 }
 
-@keyframes lEarMove {
- 50% {transform: rotate(-60deg)}
+ol, ul {
+    list-style: none;
 }
 
+.brk-page-intro__sorting-item {
+    display: inline-block;
+    position: relative;
+    width: 90px;
+    height: 152px;
+    border-top: 2px solid rgba(255,255,255,.4);
+    border-bottom: 2px solid rgba(255,255,255,.4);
+    transition: .5s border-color;
+    cursor: pointer;
+    margin: 3px 28px;
+    opacity: 0;
+  
+}
+
+
+
+
+.brk-page-intro__sorting-item:hover
+{
+ 
+}
+
+
+
+.brk-page-intro__sorting-item:before {
+    transform: rotate(60deg);
+}
+.brk-page-intro__sorting-item:after, .brk-page-intro__sorting-item:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 4px);
+    border-bottom: inherit;
+    border-top: inherit;
+    bottom: -2px;
+}
+.brk-page-intro__sorting-item:after {
+    transform: rotate(-60deg);
+}
+
+.brk-page-intro__sorting-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: auto;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    z-index: 2;
+}
+
+.brk-page-intro__sorting-before {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+    z-index: 1;
+    -webkit-clip-path: polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);
+    clip-path: polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);
+  transition: all .8s ease-in-out;
+    background: linear-gradient(70deg, rgba(0, 0, 255, 0.25), rgba(181, 95, 174, 0.56));
+    transition: all .8s ease-in-out;
+    border-top: 2px solid rgba(255, 255, 255, 0);
+    border-bottom: 0px solid rgba(255, 255, 255, 0);
+}
+
+
+
+.brk-page-intro__sorting-item:nth-child(even) {
+    margin-top: 80px;
+}
+
+.brk-page-intro__sorting-count {
+    position: absolute;
+    top: 18px;
+    right: -28px;
+    width: 23px;
+    height: 23px;
+    text-align: center;
+    font-size: .8125rem;
+    line-height: 23px;
+    color: #2675ff;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.brk-page-intro__sorting-item.checked .brk-page-intro__sorting-before, .brk-page-intro__sorting-item:hover .brk-page-intro__sorting-before {
+       background: linear-gradient(70deg, rgba(0, 0, 255), rgba(181, 95, 174));
+    transition: all .8s ease-in-out;
+  border-top: 112px solid rgba(255, 255, 255, 0);
+    border-bottom: 0px solid rgba(255, 255, 255, 0);
+  
+}
+
+.brk-page-intro__sorting-item.checked .brk-page-intro__sorting-before, .brk-page-intro__sorting-item:hover
+{
+border-color:transparent;
+  
+}
+.bordertr
+{
+  border-color:transparent;
+}
+.BordName
+{
+  color: white;
+    font-size: 6.2em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+    font-family: auto;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.47);
+  position: relative;
+    z-index: 3;
+    border-bottom: 1px dashed rgba(255,255,255,.2);
+}
+
+.mt100{
+  margin-top:100px;
+}
+
+
+@media (max-width: 320px), (max-height: 220px){
+  .BordName
+  {
+    font-size: 50px;
+  }
+  
+  .mainDiv
+  {
+    min-height: 900vh;
+  }
+}
+
+
+@media (max-width: 768px), (max-height: 321px){
+  .BordName
+  {
+    font-size: 50px;
+  }
+  
+  .mainDiv
+  {
+    min-height: 500vh;
+  }
+}
   </style>
 
   <body>
-   <div class="bg">
- <div class="spike">
-  <div class="porcupine">
-   <div class="head">
-    <div class="leftEar"></div>
-    <div class="rightEar"></div>
-    <div class="leftEye"></div>
-    <div class="rightEye"></div>
-    <div class="nose"></div>
-   </div>
+   <div class="mainDiv" style="background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1438&q=80);">
+  <div class="bgColor">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 text-center BordName">
+        welcome
+      </div>
+      <div class="col-sm-12 col-md-12 mt100">
+              <ul class="brk-page-intro__sorting d-flex flex-wrap justify-content-center font__family-montserrat">
+									<li class="bordertr brk-page-intro__sorting-item checked rendered" data-filter="*" style="opacity: 1;">
+										<div class="brk-page-intro__sorting-title">All</div>
+										<div class="brk-page-intro__sorting-before"></div>
+									</li>
+									<li class="brk-page-intro__sorting-item rendered" data-filter=".filter-portfolio" style="opacity: 1;">
+										<div class="brk-page-intro__sorting-title">Portfolio</div>
+										<div class="brk-page-intro__sorting-before"></div>
+										<div class="brk-page-intro__sorting-count font__weight-semibold">15</div>
+									</li>
+									<li class="brk-page-intro__sorting-item rendered" data-filter=".filter-shop" style="opacity: 1;">
+										<div class="brk-page-intro__sorting-title">Shop</div>
+										<div class="brk-page-intro__sorting-before"></div>
+										<div class="brk-page-intro__sorting-count font__weight-semibold">19</div>
+									</li>
+									<li class="brk-page-intro__sorting-item rendered" data-filter=".filter-business" style="opacity: 1;">
+										<div class="brk-page-intro__sorting-title">Business</div>
+										<div class="brk-page-intro__sorting-before"></div>
+										<div class="brk-page-intro__sorting-count font__weight-semibold">33</div>
+									</li>
+									<li class="brk-page-intro__sorting-item rendered" data-filter=".filter-gallery" style="opacity: 1;">
+										<div class="brk-page-intro__sorting-title">Gallery</div>
+										<div class="brk-page-intro__sorting-before"></div>
+										<div class="brk-page-intro__sorting-count font__weight-semibold">9</div>
+									</li>
+									<li class="brk-page-intro__sorting-item rendered" data-filter=".filter-shortcodes" style="opacity: 1;">
+										<div class="brk-page-intro__sorting-title">Shortcodes</div>
+										<div class="brk-page-intro__sorting-before"></div>
+										<div class="brk-page-intro__sorting-count font__weight-semibold">51</div>
+									</li>
+									<li class="brk-page-intro__sorting-item rendered" data-filter=".filter-header" style="opacity: 1;">
+										<div class="brk-page-intro__sorting-title">Headers</div>
+										<div class="brk-page-intro__sorting-before"></div>
+										<div class="brk-page-intro__sorting-count font__weight-semibold">15</div>
+									</li>
+								</ul>  
+      </div>
+    </div>
   </div>
- </div>
- <div class="text"><p>Don't touch me please</p></div>
-</div>
+    </div>
+  </div>
   </body>
 </html>
